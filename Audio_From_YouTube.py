@@ -3,7 +3,7 @@ from art import tprint
 
 # link = input('insert url:')
 def download_audio(link=""):
-    tprint('>>Download>>Video>>function>>start>>', 'small')
+    tprint('>>Download>>Audio>>function>>start>>', 'small')
 
 
 def main():
