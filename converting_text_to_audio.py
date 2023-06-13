@@ -24,13 +24,11 @@ def text_to_speech(text='Привет Настя!'):
     response = requests.post(url, json=payload, headers=headers)
     result = json.loads(response.text)
     unx_time = int(time.time())
-    # with open(f'{unx_time}.json', 'w') as file:
-    #     json.dump(result, file, indent=4, ensure_ascii=False)
+    with open(f'{unx_time}.json', 'w') as file:
+        json.dump(result, file, indent=4, ensure_ascii=False)
 
     audio_url = result.get('lovoai').get('audio_resource_url')
-    print(audio_url)
     r = requests.get(audio_url)
-    print(r)
     with open(f'{unx_time}.wav', 'wb') as file:
         file.write(r.content)
 def main():
