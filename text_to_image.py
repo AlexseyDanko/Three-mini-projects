@@ -3,7 +3,7 @@ from api import api_key # better to use OS
 import json
 from base64 import b64decode
 
-prompt = input('The prompt:')
+prompt = input('The prompt: only fantasy')
 openai.api_key = api_key
 
 response = openai.Image.create(
