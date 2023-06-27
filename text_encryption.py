@@ -2,11 +2,11 @@ import pyAesCrypt
 
 password = input('enter the password to encrypt the file: ')
 
-# encrypt
+# Encrypt
 
 pyAesCrypt.encryptFile('text.txt', 'text1.txt', password)
 
-# decrypt
+# Decrypt
 
 password = input('enter the password to dencrypt the file: ')
 
