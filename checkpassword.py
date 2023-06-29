@@ -26,7 +26,7 @@ def check_password_strength(password):
     return score
 
 
-# Главная функция программы
+
 def main():
     while True:
         password = input("Введите пароль: ")
@@ -38,6 +38,6 @@ def main():
             break
 
 
-# Запуск программы
+
 if __name__ == '__main__':
     main()
