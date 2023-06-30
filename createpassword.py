@@ -1,42 +1,29 @@
-def check_password_strength(password):
-    score = 0
+import random
+import string
 
-    # Проверка длины пароля
-    if len(password) < 8:
-        return 0
-
-    score += len(password) // 2
-
-    # Проверка наличия цифр в пароле
-    if any(char.isdigit() for char in password):
-        score += 2
-
-    # Проверка наличия букв в верхнем регистре и нижнем регистре в пароле
-    if any(char.isupper() for char in password) and any(char.islower() for char in password):
-        score += 3
-
-    # Проверка наличия специальных символов в пароле
-    if any(not char.isalnum() for char in password):
-        score += 4
-
-    # Ограничение максимального балла до 10
-    if score > 10:
-        score = 10
-
-    return score
-
-
+def generate_password(length=8):
+    # Генерация пароля случайными символами
+    characters = string.ascii_letters + string.digits + string.punctuation
+    password = ''.join(random.choice(characters) for _ in range(length))
+    return password
 
 def main():
     while True:
-        password = input("Введите пароль: ")
-        strength_score = check_password_strength(password)
-        print("Баллы надежности пароля:", strength_score)
+        try:
+            password_length = int(input("Введите длину пароля (0 для выхода): "))
 
-        choice = input("Хотите проверить еще один пароль? (y/n): ")
-        if choice.lower() != "y":
-            break
+            # Проверка на выход из программы
+            if password_length == 0:
+                break
 
+            if password_length < 0:
+                print("Длина пароля должна быть положительным числом.")
+            else:
+                password = generate_password(password_length)
+                print("Сгенерированный пароль:", password)
+
+        except ValueError:
+            print("Некорректный ввод. Пожалуйста, введите число.")
 
 
 if __name__ == '__main__':
