@@ -2,7 +2,6 @@ from pytube import YouTube
 from art import tprint
 
 
-
 def download_video(link=""):
     tprint('>>Download>>Video>>function>>start>>', 'small')
     url = YouTube(link)
