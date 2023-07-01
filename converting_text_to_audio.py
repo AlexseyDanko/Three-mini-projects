@@ -20,7 +20,6 @@ def text_to_speech(text='Привет Настя!'):
                'text': f'{text}',
                }
 
-
     response = requests.post(url, json=payload, headers=headers)
     result = json.loads(response.text)
     unx_time = int(time.time())
