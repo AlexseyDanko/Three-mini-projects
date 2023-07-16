@@ -1,7 +1,6 @@
 from twilio.rest import Client
 from TokenSid import account_sid, token_twillio,number#Token import, SID, recipient's phone number
 
-
 def send_message(text='Hello white rabbit', receiver=number):
     try:
         account = account_sid
