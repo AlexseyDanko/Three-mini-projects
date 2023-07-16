@@ -1,7 +1,6 @@
 import speech_recognition
 import time
 
-
 def main():
     rec = speech_recognition.Recognizer()
     microfone = speech_recognition.Microphone()
