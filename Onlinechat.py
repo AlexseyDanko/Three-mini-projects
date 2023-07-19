@@ -10,7 +10,6 @@ online_users = set()
 
 MAX_MESSAGES_COUNT = 100
 
-
 async def main():
     global chat_msgs
 
