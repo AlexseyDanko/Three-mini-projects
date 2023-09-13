@@ -2,7 +2,6 @@ import asyncio
 import httpx
 import tqdm
 
-
 async def download_files(url: str, filename: str):
     with open(filename, 'wb') as f:
         async with httpx.AsyncClient() as client:
