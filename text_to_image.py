@@ -17,6 +17,5 @@ with open('base.json', 'w') as file:
 
 image_base = b64decode(response['data'][0]['b64_json'])
 file_name = '_'.join(prompt.split(' '))
-
 with open(f'{file_name}.png', 'wb') as file:
     file.write(image_base)
