@@ -3,7 +3,6 @@ import pdfplumber
 from pathlib import Path
 from art import tprint
 
-
 def pdf_to_mp3(file_path='test.pdf', language='en'):
     if Path(file_path).is_file() and Path(file_path).suffix == '.pdf':
         print(f'[+] Original file: {Path(file_path).name}')
