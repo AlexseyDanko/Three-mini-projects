@@ -1,6 +1,5 @@
 from PyPDF2 import PdfReader, PdfWriter
 
-
 writer = PdfWriter()
 reader = PdfReader("kolobok.pdf")
 
