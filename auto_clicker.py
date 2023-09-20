@@ -50,7 +50,6 @@ class AutoClickerApp:
 
     def update_interval(self, event):
         self.click_interval = self.interval_scale.get()
-
     def auto_click(self):
         while self.running:
             try:
